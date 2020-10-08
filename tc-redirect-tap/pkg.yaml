@@ -1,0 +1,25 @@
+name: tc-redirect-tap
+variant: scratch
+shell: /toolchain/bin/bash
+dependencies:
+  - stage: base
+steps:
+  - sources:
+      - url: https://github.com/awslabs/tc-redirect-tap/archive/a0300978797dabc3b4ffaa4a30817d6e8dd10018.tar.gz
+        destination: tc-redirect-tap.tar.gz
+        sha256: e68d47eea3c97370219dd951438fa60182c0a392d878dfdb69ce5ff43ece2e67
+        sha512: 621fa15839f9a527cddf29502c923877f6ebd4dede2ef2f04c77ad7a7a2ae73af841726c4143d308c141723d554ec48a7ca631b67b0a7ff1c81680d5eb2d7b8e
+    prepare:
+      - |
+        tar -xzf tc-redirect-tap.tar.gz --strip-components=1
+    build:
+      - |
+        export PATH=${PATH}:${TOOLCHAIN}/go/bin
+
+        make
+    install:
+      - |
+        make install CNI_BIN_ROOT=/rootfs/opt/cni/bin
+finalize:
+  - from: /rootfs
+    to: /
