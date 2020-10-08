@@ -1,0 +1,15 @@
+name: talosctl-cni-bundle
+variant: scratch
+dependencies:
+  - stage: base
+  - image: "{{ .PKGS_PREFIX }}/cni:{{ .PKGS_VERSION }}"
+  - stage: tc-redirect-tap
+steps:
+  - install:
+      - |
+        mkdir -p /rootfs/opt/cni/bin
+
+        cp /opt/cni/bin/{bridge,firewall,static,tc-redirect-tap} /rootfs/opt/cni/bin/
+finalize:
+  - from: /rootfs
+    to: /
