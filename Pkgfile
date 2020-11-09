@@ -3,6 +3,6 @@
 format: v1alpha2
 
 vars:
-  TOOLS_IMAGE: ghcr.io/talos-systems/tools:v0.3.0-7-g08245ac
+  TOOLS_IMAGE: ghcr.io/talos-systems/tools:v0.3.0-8-ge86a8f3
   PKGS_PREFIX: ghcr.io/talos-systems
-  PKGS_VERSION: v0.3.0-17-gf46cd1b
+  PKGS_VERSION: v0.3.0-25-g27d43d0
