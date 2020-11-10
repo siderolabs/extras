@@ -1,8 +1,11 @@
-# syntax = docker.io/autonomy/bldr:v0.2.0-alpha.2-frontend
+# syntax = ghcr.io/talos-systems/bldr:v0.2.0-alpha.3-frontend
 
 format: v1alpha2
 
 vars:
-  TOOLS_IMAGE: ghcr.io/talos-systems/tools:v0.3.0-8-ge86a8f3
+  TOOLS_IMAGE: ghcr.io/talos-systems/tools:v0.3.0-9-g91070ab
   PKGS_PREFIX: ghcr.io/talos-systems
-  PKGS_VERSION: v0.3.0-25-g27d43d0
+  PKGS_VERSION: v0.3.0-26-g4e96818
+
+labels:
+  org.opencontainers.image.source: https://github.com/talos-systems/pkgs
