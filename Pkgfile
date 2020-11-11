@@ -8,4 +8,4 @@ vars:
   PKGS_VERSION: v0.3.0-26-g4e96818
 
 labels:
-  org.opencontainers.image.source: https://github.com/talos-systems/pkgs
+  org.opencontainers.image.source: https://github.com/talos-systems/extras
