@@ -17,7 +17,7 @@ COMMON_ARGS += --platform=$(PLATFORM)
 empty :=
 space = $(empty) $(empty)
 
-TARGETS = install-cni pod-checkpointer talosctl-cni-bundle-install
+TARGETS = install-cni talosctl-cni-bundle-install
 
 all: $(TARGETS) ## Builds all known pkgs.
 
