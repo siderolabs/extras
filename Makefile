@@ -4,6 +4,7 @@ SHA ?= $(shell git describe --match=none --always --abbrev=8 --dirty)
 TAG ?= $(shell git describe --tag --always --dirty)
 BRANCH ?= $(shell git rev-parse --abbrev-ref HEAD)
 REGISTRY_AND_USERNAME := $(REGISTRY)/$(USERNAME)
+SOURCE_DATE_EPOCH ?= $(shell git log -1 --pretty=%ct)
 
 BUILD := docker buildx build
 PLATFORM ?= linux/amd64,linux/arm64
@@ -12,6 +13,7 @@ PUSH ?= false
 COMMON_ARGS := --file=Pkgfile
 COMMON_ARGS += --progress=$(PROGRESS)
 COMMON_ARGS += --platform=$(PLATFORM)
+COMMON_ARGS += --build-arg=SOURCE_DATE_EPOCH=$(SOURCE_DATE_EPOCH)
 
 , := ,
 empty :=
