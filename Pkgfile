@@ -4,7 +4,7 @@ format: v1alpha2
 
 vars:
   PKGS_PREFIX: ghcr.io/talos-systems
-  PKGS_VERSION: v1.0.0
+  PKGS_VERSION: v1.1.0-alpha.0-6-g41f291d
 
 labels:
   org.opencontainers.image.source: https://github.com/talos-systems/extras
