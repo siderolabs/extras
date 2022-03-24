@@ -1,10 +1,10 @@
-# syntax = ghcr.io/talos-systems/bldr:v0.2.0-alpha.7-frontend
+# syntax = ghcr.io/siderolabs/bldr:v0.2.0-alpha.7-1-g9d49478-frontend
 
 format: v1alpha2
 
 vars:
-  PKGS_PREFIX: ghcr.io/talos-systems
-  PKGS_VERSION: v1.0.0
+  PKGS_PREFIX: ghcr.io/siderolabs
+  PKGS_VERSION: v1.1.0-alpha.0-8-g0c38670
 
 labels:
-  org.opencontainers.image.source: https://github.com/talos-systems/extras
+  org.opencontainers.image.source: https://github.com/siderolabs/extras
