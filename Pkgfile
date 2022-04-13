@@ -3,8 +3,8 @@
 format: v1alpha2
 
 vars:
-  PKGS_PREFIX: ghcr.io/talos-systems
-  PKGS_VERSION: v1.0.0
+  PKGS_PREFIX: ghcr.io/siderolabs
+  PKGS_VERSION: v1.0.0-7-ge6eb485
 
 labels:
   org.opencontainers.image.source: https://github.com/talos-systems/extras
