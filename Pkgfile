@@ -4,7 +4,7 @@ format: v1alpha2
 
 vars:
   PKGS_PREFIX: ghcr.io/siderolabs
-  PKGS_VERSION: v1.1.0-alpha.0-38-g91bb939
+  PKGS_VERSION: v1.1.0-alpha.0-46-g1f48da7
 
 labels:
   org.opencontainers.image.source: https://github.com/siderolabs/extras

@@ -4,7 +4,10 @@ SHA ?= $(shell git describe --match=none --always --abbrev=8 --dirty)
 TAG ?= $(shell git describe --tag --always --dirty)
 BRANCH ?= $(shell git rev-parse --abbrev-ref HEAD)
 REGISTRY_AND_USERNAME := $(REGISTRY)/$(USERNAME)
-SOURCE_DATE_EPOCH ?= $(shell git log -1 --pretty=%ct)
+# inital commit time
+# git rev-list --max-parents=0 HEAD
+# git log d31b8c41c87600f2d881508bb40aad232659f9bb --pretty=%ct
+SOURCE_DATE_EPOCH ?= "1602102660"
 
 BUILD := docker buildx build
 PLATFORM ?= linux/amd64,linux/arm64
