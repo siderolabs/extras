@@ -1,10 +1,10 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.2.0-alpha.7-1-g9d49478-frontend
+# syntax = ghcr.io/siderolabs/bldr:v0.2.0-alpha.8-frontend
 
 format: v1alpha2
 
 vars:
   PKGS_PREFIX: ghcr.io/siderolabs
-  PKGS_VERSION: v1.1.0-2-g9f61c50
+  PKGS_VERSION: v1.1.0-15-gf171197
 
 labels:
   org.opencontainers.image.source: https://github.com/siderolabs/extras
