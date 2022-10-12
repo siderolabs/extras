@@ -5,11 +5,10 @@ dependencies:
   - stage: base
 steps:
   - sources:
-      # see https://github.com/awslabs/tc-redirect-tap/pull/8
-      - url: https://github.com/smira/tc-redirect-tap/archive/2d0ec76e7ae722aa78e158e55b518dd053bf1605.tar.gz
+      - url: https://github.com/awslabs/tc-redirect-tap/archive/9f2f6be89079d4f3ffc179138cbff36542669809.tar.gz
         destination: tc-redirect-tap.tar.gz
-        sha256: 84b94cca0c9c4032ab3d8c9e555c06bc6fd0bcd08b67b309123102d4c4bdc5c8
-        sha512: 8bb0de371f0f1d78daa8b2d0c29dcd52baa0aa282f2bf830470750b39e62fb9bbaea6f1c5bafde81e7c605ba297c5e558df999865eaf0b426c3458fdddeb84c6
+        sha256: e1fc3759c66b6352755b37dec05e77170a42336b081748b5ca3590cd4302bff6
+        sha512: 5c4809116d49e2ecb272510b520f0b74238e42a3e7ffca36aaae7b0aa34d96284eb19bee3f5f9d00dd6d9205f5e55b0760de0209f330d742952cd0356c6efa88
     prepare:
       - |
         tar -xzf tc-redirect-tap.tar.gz --strip-components=1
