@@ -9,6 +9,10 @@ REGISTRY_AND_USERNAME := $(REGISTRY)/$(USERNAME)
 # git log d31b8c41c87600f2d881508bb40aad232659f9bb --pretty=%ct
 SOURCE_DATE_EPOCH ?= "1602102660"
 
+# Sync bldr image with Pkgfile
+BLDR ?= docker run --rm --volume $(PWD):/tools --entrypoint=/bldr \
+	ghcr.io/siderolabs/bldr:v0.2.0-alpha.10 graph --root=/tools
+
 BUILD := docker buildx build
 PLATFORM ?= linux/amd64,linux/arm64
 PROGRESS ?= auto
@@ -30,6 +34,10 @@ all: $(TARGETS) ## Builds all known pkgs.
 help: ## This help menu.
 	@grep -E '^[a-zA-Z%_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
+local-%: ## Builds the specified target defined in the Dockerfile using the local output type. The build result will be output to the specified local destination.
+	@$(MAKE) target-$* TARGET_ARGS="--output=type=local,dest=$(DEST) $(TARGET_ARGS)"
+	@PLATFORM=$(PLATFORM)
+
 target-%: ## Builds the specified target defined in the Dockerfile. The build result will only remain in the build cache.
 	@$(BUILD) \
 		--target=$* \
@@ -45,4 +53,4 @@ $(TARGETS):
 
 .PHONY: deps.png
 deps.png:
-	bldr graph | dot -Tpng > deps.png
+	@$(BLDR) graph | dot -Tpng > deps.png
