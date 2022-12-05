@@ -7,7 +7,7 @@ vars:
   PKGS_VERSION: v1.3.0
 
   # renovate: datasource=git-refs versioning=git depName=https://github.com/awslabs/tc-redirect-tap.git
-  tc_redirect_tap_ref: b589b55eaf3c40b5724009929ef08e897711389f
+  tc_redirect_tap_ref: 8dcd1aa8c7a77b4bd4f47ec0976d17d65758b447
   tc_redirect_tap_sha256: a396e26f2dfa25264dc903fa42bd8bf5558624208bc473f55fb1ae74f1e828f6
   tc_redirect_tap_sha512: bbc62f865ade365551406455868c6686359f0cd7b6118ea21c159cf3b8360af4b2456d5d819499d0b0bf831e4bdecf1b416b6783ada3d9c5b23c9580ca03f5ab
 
