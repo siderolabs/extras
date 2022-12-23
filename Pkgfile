@@ -4,12 +4,12 @@ format: v1alpha2
 
 vars:
   PKGS_PREFIX: ghcr.io/siderolabs
-  PKGS_VERSION: v1.3.0
+  PKGS_VERSION: v1.4.0-alpha.0-6-g325c9bf
 
   # renovate: datasource=git-refs versioning=git depName=https://github.com/awslabs/tc-redirect-tap.git
-  tc_redirect_tap_ref: b589b55eaf3c40b5724009929ef08e897711389f
-  tc_redirect_tap_sha256: a396e26f2dfa25264dc903fa42bd8bf5558624208bc473f55fb1ae74f1e828f6
-  tc_redirect_tap_sha512: bbc62f865ade365551406455868c6686359f0cd7b6118ea21c159cf3b8360af4b2456d5d819499d0b0bf831e4bdecf1b416b6783ada3d9c5b23c9580ca03f5ab
+  tc_redirect_tap_ref: 8dcd1aa8c7a77b4bd4f47ec0976d17d65758b447
+  tc_redirect_tap_sha256: 636c065432a725b7bce31186fda668550f246f982938e2dfb4a62d1152ba2cd2
+  tc_redirect_tap_sha512: b99c8daafeec2f28b2567018344940ba59a2ae11f34dbc9a98ff3b93dd6cd1cd293c79a089f356ce1b02ce7c0fbde0ab2d0824a7622e4efafa11ff9902fa4fd9
 
 labels:
   org.opencontainers.image.source: https://github.com/siderolabs/extras
