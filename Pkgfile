@@ -1,4 +1,4 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.2.0-alpha.10
+# syntax = ghcr.io/siderolabs/bldr:v0.2.0-alpha.12
 
 format: v1alpha2
 

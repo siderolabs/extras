@@ -67,6 +67,12 @@ steps:
       - name: docker
         path: /root/.docker/buildx
 
+trigger:
+  branch:
+    exclude:
+      - renovate/*
+      - dependabot/*
+
 volumes:
   - name: docker-socket
     host:
@@ -96,9 +102,13 @@ steps:
         - failure
 
 trigger:
+  branch:
+    exclude:
+      - renovate/*
+      - dependabot/*
   status:
-    - success
-    - failure
+  - success
+  - failure
 
 depends_on:
   - default
