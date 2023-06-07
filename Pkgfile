@@ -1,15 +1,15 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.2.0-alpha.12
+# syntax = ghcr.io/siderolabs/bldr:v0.2.0
 
 format: v1alpha2
 
 vars:
   PKGS_PREFIX: ghcr.io/siderolabs
-  PKGS_VERSION: v1.5.0-alpha.0-3-g174f8fc
+  PKGS_VERSION: v1.5.0-alpha.0-22-g5fb5e95
 
   # renovate: datasource=git-refs versioning=git depName=https://github.com/awslabs/tc-redirect-tap.git
-  tc_redirect_tap_ref: 70412ed40429a56722183d1785e716765922f25a
-  tc_redirect_tap_sha256: 498bb6b3858259a140bb506a6a199573c4753d56988ce6dfb8f01ffd39eadc07
-  tc_redirect_tap_sha512: 66aea29a479f7b5d8b8b6aaccb6b2cc1639490aaf087695eea244c0ec879223d75a683243d6fdf9cdefb69a8f37f0125591cb722a4fba2d56b68d54ec8141781
+  tc_redirect_tap_ref: ff84405289d78f580d8fd3b04d2ae266fd297fb2
+  tc_redirect_tap_sha256: c501e3da86ce05f9478dff28a7b6647d2e21482b16c9bb9c580dc53475ca81a5
+  tc_redirect_tap_sha512: 36a0a317177e99302c610d588a41b1d0e18b47f2f926f0233a6b98a9eb4cbaf4b4a41ca0a5062793757cb3d20090b6253c74659c81f4f00cb2dad609cea42053
 
 labels:
   org.opencontainers.image.source: https://github.com/siderolabs/extras
