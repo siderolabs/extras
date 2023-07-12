@@ -4,7 +4,7 @@ format: v1alpha2
 
 vars:
   PKGS_PREFIX: ghcr.io/siderolabs
-  PKGS_VERSION: v1.4.1-12-g91b8dd4
+  PKGS_VERSION: v1.4.1-15-gd5a3fd7
 
   # renovate: datasource=git-refs versioning=git depName=https://github.com/awslabs/tc-redirect-tap.git
   tc_redirect_tap_ref: 70412ed40429a56722183d1785e716765922f25a
