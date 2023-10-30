@@ -40,6 +40,17 @@ local-%: ## Builds the specified target defined in the Dockerfile using the loca
 	@$(MAKE) target-$* TARGET_ARGS="--output=type=local,dest=$(DEST) $(TARGET_ARGS)"
 	@PLATFORM=$(PLATFORM)
 
+reproducibility-test:
+	@$(MAKE) reproducibility-test-local-reproducibility
+
+reproducibility-test-local-%: ## Builds the specified target defined in the Pkgfile using the local output type. The build result will be output to the specified local destination.
+	@rm -rf _out1/ _out2/
+	@$(MAKE) local-$* DEST=_out1
+	@$(MAKE) local-$* DEST=_out2 TARGET_ARGS="--no-cache"
+	@touch -ch -t $$(date -d @$(SOURCE_DATE_EPOCH) +%Y%m%d0000) _out1 _out2
+	@diffoscope _out1 _out2
+	@rm -rf _out1/ _out2/
+
 target-%: ## Builds the specified target defined in the Dockerfile. The build result will only remain in the build cache.
 	@$(BUILD) \
 		--target=$* \
