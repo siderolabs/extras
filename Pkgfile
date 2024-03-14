@@ -1,10 +1,10 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.2.3
+# syntax = ghcr.io/siderolabs/bldr:v0.3.0
 
 format: v1alpha2
 
 vars:
   PKGS_PREFIX: ghcr.io/siderolabs
-  PKGS_VERSION: v1.7.0-alpha.0-33-g3aacf03
+  PKGS_VERSION: v1.7.0-alpha.0-35-g8804a60
 
   # renovate: datasource=git-refs versioning=git depName=https://github.com/awslabs/tc-redirect-tap.git
   tc_redirect_tap_ref: 6827f7b2f5e9ec675cb7dc9bbe4b201c228d565e
