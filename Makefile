@@ -1,6 +1,6 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED, PLEASE DO NOT EDIT.
 #
-# Generated on 2024-11-29T13:33:28Z by kres 232fe63.
+# Generated on 2024-12-18T15:24:30Z by kres b9507d6.
 
 # common variables
 
@@ -118,7 +118,7 @@ local-%:  ## Builds the specified target defined in the Pkgfile using the local 
 	    echo $$platform; \
 	    directory="$${platform//\//_}"; \
 	    if [[ -d "$$DEST/$$directory" ]]; then \
-	      mv "$$DEST/$$directory/"* $$DEST; \
+	      mv -f "$$DEST/$$directory/"* $$DEST; \
 	      rmdir "$$DEST/$$directory/"; \
 	    fi; \
 	  done'
