@@ -16,7 +16,7 @@ steps:
       - |
         export PATH=${PATH}:${TOOLCHAIN}/go/bin
 
-        make
+        CGO_ENABLED=0 GOFLAGS="-ldflags=-s" make
     install:
       - |
         make install CNI_BIN_ROOT=/rootfs/opt/cni/bin
