@@ -1,6 +1,6 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED, PLEASE DO NOT EDIT.
 #
-# Generated on 2025-01-21T11:42:07Z by kres 3075de9.
+# Generated on 2025-02-06T12:31:14Z by kres 987bf4d.
 
 # common variables
 
@@ -25,7 +25,7 @@ SOURCE_DATE_EPOCH := $(shell git log $(INITIAL_COMMIT_SHA) --pretty=%ct)
 
 # sync bldr image with pkgfile
 
-BLDR_RELEASE := v0.3.2
+BLDR_RELEASE := v0.4.0-1-g76a2c8f
 BLDR_IMAGE := ghcr.io/siderolabs/bldr:$(BLDR_RELEASE)
 BLDR := docker run --rm --user $(shell id -u):$(shell id -g) --volume $(PWD):/src --entrypoint=/bldr $(BLDR_IMAGE) --root=/src
 
@@ -44,8 +44,7 @@ COMMON_ARGS += --build-arg=SOURCE_DATE_EPOCH=$(SOURCE_DATE_EPOCH)
 
 # targets defines all the available targets
 
-TARGETS = install-cni
-TARGETS += talosctl-cni-bundle-install
+TARGETS = talosctl-cni-bundle
 
 # help menu
 
@@ -116,7 +115,7 @@ docker-%:  ## Builds the specified target defined in the Pkgfile using the docke
 	@$(MAKE) target-$* TARGET_ARGS="$(TARGET_ARGS)"
 
 reproducibility-test:  ## Builds the reproducibility test target
-	@$(MAKE) reproducibility-test-local-reproducibility
+	@$(MAKE) reproducibility-test-local-talosctl-cni-bundle
 
 reproducibility-test-local-%:  ## Builds the specified target defined in the Pkgfile using the local output type with and without cahce. The build result will be output to the specified local destination
 	@rm -rf $(ARTIFACTS)/build-a $(ARTIFACTS)/build-b

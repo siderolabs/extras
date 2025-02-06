@@ -1,5 +1,6 @@
 name: talosctl-cni-bundle
 variant: scratch
+shell: /bin/bash
 dependencies:
   - stage: base
   - image: "{{ .PKGS_PREFIX }}/cni:{{ .PKGS_VERSION }}"

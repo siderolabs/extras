@@ -2,6 +2,5 @@
 kind: pkgfile.Build
 spec:
   targets:
-    - install-cni
-    - talosctl-cni-bundle-install
-  reproducibleTargetName: reproducibility
+    - talosctl-cni-bundle
+  reproducibleTargetName: talosctl-cni-bundle

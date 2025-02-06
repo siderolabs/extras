@@ -1,6 +1,6 @@
 name: tc-redirect-tap
 variant: scratch
-shell: /toolchain/bin/bash
+shell: /bin/bash
 dependencies:
   - stage: base
 steps:
@@ -9,13 +9,14 @@ steps:
         destination: tc-redirect-tap.tar.gz
         sha256: "{{ .tc_redirect_tap_sha256 }}"
         sha512: "{{ .tc_redirect_tap_sha512 }}"
+  - network: default
     prepare:
       - |
         tar -xzf tc-redirect-tap.tar.gz --strip-components=1
+        go mod download
+  - network: none
     build:
       - |
-        export PATH=${PATH}:${TOOLCHAIN}/go/bin
-
         CGO_ENABLED=0 GOFLAGS="-ldflags=-s" make
     install:
       - |
