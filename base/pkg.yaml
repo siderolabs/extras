@@ -1,8 +1,7 @@
 name: base
 variant: scratch
 dependencies:
-  - image: "{{ .PKGS_PREFIX }}/base:{{ .PKGS_VERSION }}"
-  - image: "{{ .PKGS_PREFIX }}/ca-certificates:{{ .PKGS_VERSION }}"
+  - image: "{{ .TOOLS_PREFIX }}/tools:{{ .TOOLS_VERSION }}"
 finalize:
   - from: /
     to: /
