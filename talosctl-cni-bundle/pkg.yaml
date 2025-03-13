@@ -10,7 +10,7 @@ steps:
       - |
         mkdir -p /rootfs/opt/cni/bin
 
-        cp /opt/cni/bin/{bridge,firewall,static,tc-redirect-tap} /rootfs/opt/cni/bin/
+        cp /opt/cni/bin/{sbr,bridge,firewall,macvlan,static,tc-redirect-tap} /rootfs/opt/cni/bin/
 finalize:
   - from: /rootfs
     to: /
