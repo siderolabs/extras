@@ -9,7 +9,7 @@ vars:
   TOOLS_VERSION: v1.10.0-alpha.0-19-g87acb27
 
   # renovate: datasource=git-refs versioning=git depName=https://github.com/awslabs/tc-redirect-tap.git
-  tc_redirect_tap_ref: fb2c2b5e660adb567157c9d69e1de19b0c7c4f37
+  tc_redirect_tap_ref: b3c5abdd90fe9066aa75f429182688a51c1e9279
   tc_redirect_tap_sha256: 874ca063816e052305d2a3ec4e64f33d88ecf2862c0b09271ea851a54cd8b9f0
   tc_redirect_tap_sha512: ad21b432c2d92d7bbb4ba13c7436e01c0431c18d92ab9ef23f19491bcb0985fff3970b1cbb553b38a2b41e4781b80dec0bd7367caa26eff9b9f79f0aad9dd5e5
 
